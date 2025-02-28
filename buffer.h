@@ -1,3 +1,10 @@
+#ifndef __BUFFER_H__
+#define __BUFFER_H__
+
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE
+#endif
+
 #include<stdio.h>
 #include<sys/types.h>
 
@@ -9,3 +16,8 @@ typedef struct
 } InputBuffer;
 
 InputBuffer* new_input_buffer(void);
+void print_prompt(void);
+void read_input(InputBuffer* input_buffer);
+void close_input_buffer(InputBuffer* input_buffer);
+
+#endif
