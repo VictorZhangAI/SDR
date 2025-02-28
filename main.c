@@ -8,6 +8,8 @@
 #include<string.h>
 
 #include"buffer.h"
+#include"meta.h"
+#include"state.h"
 
 int main(int argc, char **argv)
 {
