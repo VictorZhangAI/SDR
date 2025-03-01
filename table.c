@@ -11,7 +11,7 @@ Table* new_table()
 	table->num_rows = 0;
 	for(uint32_t i = 0; i < TABLE_MAX_PAGES; i++)
 	{
-		table_pages[i] = NULL;
+		table->pages[i] = NULL;
 	}
 	return table;
 }

@@ -13,6 +13,7 @@
 typedef enum
 {
         PREPARE_SUCCESS,
+	PREPARE_SYNTAX_ERROR,
         PREPARE_UNRECOGNIZED_STATEMENT
 } PrepareResult;
 
@@ -28,7 +29,10 @@ typedef struct
 	Row row_to_insert;
 } Statement;
 
-
+typedef enum {
+	EXECUTE_SUCCESS,
+	EXECUTE_TABLE_FULL
+} ExecuteResult;
 
 PrepareResult prepare_statement(InputBuffer* input_buffer, Statement* statement);
 ExecuteResult execute_insert(Statement* statement, Table* table);

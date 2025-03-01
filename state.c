@@ -2,6 +2,7 @@
 #define _GNU_SOURCE
 #endif
 
+#include <stdlib.h>
 #include<stdio.h>
 #include<string.h>
 
@@ -65,4 +66,5 @@ ExecuteResult execute_statement(Statement* statement, Table* table)
 		case(STATEMENT_SELECT):
 			return execute_select(statement, table);
 	}
+	return -1;
 }
